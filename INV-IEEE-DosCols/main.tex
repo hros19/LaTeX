@@ -9,6 +9,12 @@
 \usepackage{xcolor}
 \usepackage[spanish]{babel}
 
+\usepackage[%
+    colorlinks=true,
+    pdfborder={0 0 0},
+    linkcolor=blue
+]{hyperref}
+
 \renewcommand{\IEEEkeywordsname}{Palabras clave}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -229,6 +235,34 @@ crea relaciones semánticas entre tweets mediante vectores.
  para calcular el sentimiento general de cada comentario del
  de prueba.
  %https://arxiv.org/ftp/arxiv/papers/1511/1511.09142.pdf
+
+\section{Algoritmos o técnicas utilizadas}
+Se verán algoritmos tanto que hayan sido mencionados o no anteriormente.
+\begin{itemize}
+  \item \textbf{Anotación de emociones}: Consiste en la anotación de los sentimientos presentes por partes de los n locutores en una conversación, por obvias razones no funciono, ya que el flujo natural de la conversación era interrumpido, se pensó en anotar después de la conversación, pero la idea no se ha llevado a cabo por el momento.
+  \item \textbf{Perfil de persona}: Se utiliza Se utiliza para identificar qué clase de personas son los locutores de la conversación, ya que un mensaje o una línea de conversación pueden tomar distintos significados si se dice/escribe en un tono sarcástico o burlesco, por eso se optó por crear un perfil de persona el cual almacena esas características sobre alguien. 
+  \item \textbf{Reconocimiento facial}: Se utiliza para hacer captura de las expresiones provenientes de los locutores, ya que estás dicen mucho sobre una situación, se tuvo ciertas complicaciones, sobre todo cuando una persona cambiaba de emoción drásticamente, haciendo que al ERC se le complicara determinar el estado de la persona, por esto se implementó un historial de emociones, donde se ira almacenando las expresiones de la persona, para así determinar la razón del cambio de expresión.
+  \item \textbf{Seguimiento ocular}: Se tomaban en cuenta cosas como duración media de la fijación o el recuento de regresión de pestañeos con el fin de contribuir características para la detección de sarcasmo.
+\item \textbf{Bolsa de palabras}: Es una representación textual que describe la aparición de palabras en un documento. Se registra el recuento de palabras, ignorando los detalles gramaticales y el orden de las palabras. Se llama "bolsa de palabras" porque se descarta cualquier información sobre el orden o la estructura de las palabras en el documento. Este es un método muy utilizado en el área de NLP.
+  % (1) https://www.redalyc.org/pdf/5157/515751576001.pdf
+  \item \textbf{Clasificación de polaridad}: Explora si la opinión expresada en un documento o una frase sobre una determinada característica o aspecto de un comentario es positivo, negativa o neutra. 
+
+  Para lograr esto hay distintas estrategias, en este caso solo se hará enfoque en una específica, la cual está basada en la orientación semántica de las palabras, donde cada término que expresa opinión es anotado con un valor que representa su polaridad. En (1) menciona que este sistema, además de resolver la orientación semántica almacenada a nivel individual en adjetivos, sustantivos, verbos y adverbios; trata modificadores de la polaridad como son la negación o los intensificadores (“muy", "poco”, “bastante”, etc.…). También detecta y descarta el sentimiento reflejado en el contenido no fáctico del texto, representado, por ejemplo, mediante expresiones condicionales o subjuntivas.
+Se segmenta el texto en oraciones, que a su vez se dividen para hacer la debida etiquetación, esto se ve ilustrado en la Figura~\ref{fig1}'', además se apoyan en diccionarios que clasifican las palabras en rangos numéricos, los cuales, mientras más tiendan a negativo, peor será el comentario y viceversa, una idea de estos diccionarios se ve representada en la Figura~\ref{fig2}''. 
+
+\end{itemize}
+
+\begin{figure}[htbp]
+  \caption{Segmentación de una oración.}
+  \centerline{\includegraphics[width=0.45\textwidth]{IMG´s/Figura1.png}}
+  \label{fig1}
+\end{figure}
+\newpage
+\begin{figure}[htbp]
+  \caption{Ejemplo de un diccionarios.}
+  \centerline{\includegraphics[width=0.4\textwidth]{IMG´s/Figura2.png}}
+  \label{fig2}
+\end{figure}
 
 \section{Conclusiones}
 
