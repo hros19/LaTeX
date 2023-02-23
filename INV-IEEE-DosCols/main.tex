@@ -12,7 +12,8 @@
 \usepackage[%
     colorlinks=true,
     pdfborder={0 0 0},
-    linkcolor=blue
+    linkcolor=blue,
+    citecolor=red
 ]{hyperref}
 
 \renewcommand{\IEEEkeywordsname}{Palabras clave}
@@ -168,7 +169,39 @@ Esto se hace a través de diversas técnicas y algoritmos, en su mayoría basado
 Todo esto para analizar y extraer patrones, significados y relaciones entre palabras y textos. 
 Todo esto permitiendo a las computadoras entender el lenguaje humano, mediante la toma de decisiones de forma autónoma.
 
-En \cite{b6} se menciona el surgimiento del PLN estadístico, este enfoque se basa en la idea de que el lenguaje natural sigue ciertas regularidades estadísticas que se pueden modelar con precisión utilizando técnicas de estadística y aprendizaje automático. Por ejemplo, se pueden utilizar modelos probabilísticos para predecir la probabilidad de que una palabra aparezca en un contexto determinado o para determinar la relación semántica entre palabras.
+En \cite{b6} se menciona el surgimiento del PLN estadístico, este enfoque se basa en la idea de que el lenguaje natural sigue ciertas regularidades estadísticas que se pueden modelar con precisión utilizando técnicas de estadística y aprendizaje automático. 
+Por ejemplo, se pueden utilizar modelos probabilísticos para predecir la probabilidad de que una palabra aparezca en un contexto determinado o para determinar la relación semántica entre palabras. 
+En \cite{b7} se da una breve introducción al PLN estadístico, y en \cite{b8} se mencionan algunos de los algoritmos más utilizados en el PLN estadístico, además de problemas comunes de este enfoque. Estas investigaciones son importantes que ya nos permite clasificar las tareas de PLN en dos grandes grupos: las tareas de bajo nivel y las tareas de alto nivel.
+
+\subsubsection{Tareas de bajo nivel}
+\begin{itemize}
+  \item \textbf{Detección de límites de oraciones}: también conocida como (SBD) por sus siglas en inglés, Sentence Boundary Detection, es la tarea de identificar los límites de las oraciones en un texto.
+  Es una tarea importante, sobretodo en áreas como la traducción automática, la generación de texto, la extracción de información, el análisis de sentimientos, etc. Para ello se pueden hacer de métodos basados en reglas, modelos probabilísticos y aprendizaje automático.
+  Puede llegar a hacer un proceso muy complejo, ya que las oraciones pueden llegar a ser muy complejas, contener muchas cláusulas o frases, lo que puede ser difícil determinar donde termina una oración y empieza otra.
+  Sin mencionar que en un texto pueden haber abreviaturas, acrónimos, citaciones u otros signos de puntuación que pueden llegar a confundir a los modelos.
+  \item \textbf{Tokenización}: esta tarea consiste en dividir un texto en unidades más pequeñas, llamadas tokens. Pueden ser palabras, símbolos, números, o incluso una frase completa.
+  Este es un paso fundamental para el análisis de sentimientos, ya que es necesario dividir el texto en palabras para poder analizar cada una de ellas por separado. En \cite{b9} se mencionan algunas utilizadas para la tokenización de textos, tales como la tokenización por espacios, la tokenización por expresiones regulares, la tokenización por palabras, la tokenización por frases, etc.
+  Los métodos más utilizados son: la tokenización por espacios, que es la más sencilla ya que consiste en dividir el texto en tokens por espacios; la tokenización por signos de puntuales, que puede llegar a ser eficiente para texto formal, pero no para texto coloquial; la tokenización por análisis morfológico, que consiste en analizar la estructura morfológica de las palabras para dividirlas en tokens, permitiendo una tokenización muy precisa.
+  \item \textbf{Decomposición morfológica}: este implica en dividir la palabra en componentes morfológicos, como la raíz, el sufijo, el prefijo, y demás. Esta parte proporciona información útil sobre el significado y la estructura de una palabra.
+  \item \textbf{Part-of-speech tagging}: también conocido como POS tagging, es la tarea de asignar una etiqueta a cada palabra en un texto, indicando su categoría gramatical. Por ejemplo, si la palabra es un sustantivo, un verbo, un adjetivo, etc.
+  \item \textbf{Shallow parsing}: también conocido como análisis sintáctico superficial, es la tarea de identificar las relaciones sintácticas entre las palabras de un texto. Por ejemplo, si una palabra es el sujeto de una oración, el objeto directo, el objeto indirecto, etc. Hace uso de etiquetas gramaticales identificadas en el POS tagging. En \cite{b10} y \cite{b11} se mencionan como se preparan los datos, y concluyen que independientemente del modelo empleado para el análisis de texto, lo que en realidad influye más al momento de analizar resultados es la cantidad de datos de entrenamiento y la calidad de los mismos.
+\end{itemize}
+Propiamente, las tareas de bajo nivel son más generalizadas. Por otro lado, las tareas de alto nivel son trabajadas en base a las tareas de bajo nivel, y suelen ser más específicas. En \cite{b12} presentan un modelo incremental para el manejo de múltiples tareas de PLN, con una profundidad creciente. Entre algunas tareas de alto nivel se encuentran:
+\begin{itemize}
+  \item \textbf{Identificación de errores gramaticales y ortográficos}: este tipos de tareas pueden ser muy volátiles, se puede dar el caso de detectar falsos positivos (errores que no existen) o falsos negativos (errores que no se detectan).  En \cite{b13} \cite{b14} exponen modelos basados en la estructuración y análisis de texto mediante el uso de redes neuronales recurrentes, comparandolos con modelos tradicionales.
+  \item \textbf{Named Entity Recognition}: también conocido como NER, es la tarea de identificar entidades nombradas en un texto. Por ejemplo, si una palabra es un nombre propio, un lugar, una fecha, etc. En \cite{b15} desarrollan un modelo basado en redes neuronales para aprender relaciones complejas en grandes cantidad de texto. En \cite{b16} y \cite{b17} exploran técnicas mediante usos de aprendizaje supervisado y no supervisado, sistemas NERC y aprendizaje automático basado en reglas.
+\end{itemize}
+Se profundizarán estas y otras tareas a continuación, lo dejaremos de momento como ejemplos de como se pueden clasificar las tareas de PLN.
+
+\subsubsection{Named Entity Recognition}\label{subsubsec:NER}
+Aprovecharemos en listar algunos retos al momento de realizar NER, para generalizar conceptos que se pueden aplicar en el ámbito del procesamiento de texto de forma general, algunos de estos retos son: 
+\begin{itemize}
+  \item \textbf{Variación del orden de palabras o frases}: esto se da cuando una entidad nombrada se encuentra en una posición diferente en el texto, pero se refiere a la misma entidad.
+  \item \textbf{Derivación}: esto permite que varias palabras se refieran a la misma entidad, más comúnmente denominado como la raíz de la palabra. Varias derivaciones de una misma raíz pueden tener diferentes significados, por ejemplo, las palabras "comer", "comeedor" y "come" pueden verse como diferentes derivaciones de una misma raíz "com" y que se puedan clasificar de esa misma forma.
+  La derivación puede se tiene que entender desde un ámbito léxico, en lugar de un ámbito semántico.
+  \item \textbf{Homógrafos}: esto se da cuando dos o más palabras se escriben de la misma forma, pero tienen significados diferentes. Por ejemplo, la palabra "banco" puede referirse a un banco de un río, o a un banco de una institución financiera. Esto puede confundir a muchos modelos de NER, ya que no pueden distinguir entre ambas palabras. Para ello se requieren de otros métodos para poder identificar la entidad nombrada, métodos enfocados en un ámbito semántico y no léxico. En \cite{b18} se propone un método de desambiguación de homógrafos no supervisado que se basa en técnicas de agrupamiento y asignación semántica. Concluyendo mediante resultados experimentales que es un método eficiente en comparación a otros métodos no supervisados.
+
+\end{itemize}
 
 %Frecuencia y cercanía de las palabras
 
@@ -248,7 +281,7 @@ Se verán algoritmos tanto que hayan sido mencionados o no anteriormente.
   \item \textbf{Clasificación de polaridad}: Explora si la opinión expresada en un documento o una frase sobre una determinada característica o aspecto de un comentario es positivo, negativa o neutra. 
 
   Para lograr esto hay distintas estrategias, en este caso solo se hará enfoque en una específica, la cual está basada en la orientación semántica de las palabras, donde cada término que expresa opinión es anotado con un valor que representa su polaridad. En (1) menciona que este sistema, además de resolver la orientación semántica almacenada a nivel individual en adjetivos, sustantivos, verbos y adverbios; trata modificadores de la polaridad como son la negación o los intensificadores (“muy", "poco”, “bastante”, etc.…). También detecta y descarta el sentimiento reflejado en el contenido no fáctico del texto, representado, por ejemplo, mediante expresiones condicionales o subjuntivas.
-Se segmenta el texto en oraciones, que a su vez se dividen para hacer la debida etiquetación, esto se ve ilustrado en la Figura~\ref{fig1}'', además se apoyan en diccionarios que clasifican las palabras en rangos numéricos, los cuales, mientras más tiendan a negativo, peor será el comentario y viceversa, una idea de estos diccionarios se ve representada en la Figura~\ref{fig2}''. 
+Se segmenta el texto en oraciones, que a su vez se dividen para hacer la debida etiquetación, esto se ve ilustrado en la Figura~\ref{fig1}'', además se apoyan en diccionarios que clasifican las palabras en rangos numéricos, los cuales, mientras más tiendan a negativo, peor será el comentario y viceversa, una idea de estos diccionarios se ve representada en la Figura~\ref{fig2}''.
 
 \end{itemize}
 
@@ -307,6 +340,19 @@ copy& More table copy$^{\mathrm{a}}$& &  \\
 \bibitem{b5} Gonçalves, P., Araújo, M., Benevenuto, F., and Cha, M. 2013. Comparing and Combining Sentiment Analysis Methods. In Proceedings of the First ACM Conference on Online Social Networks (pp. 27–38). Association for Computing Machinery.
 \bibitem{b6} Nadkarni, P.M., Ohno-Machado, L. and Chapman, W.W., 2011. Natural language processing: an introduction. Journal of the American Medical Informatics Association, 18(5), pp.544-551.
 \bibitem{b7} Jurafsky, D. and Martin, J.H., 2008. Speech and language processing. 2nd edn Englewood Cliffs. NJ: Prentice Hall.
+\bibitem{b8} Manning, C. and Schutze, H., 1999. Foundations of statistical natural language processing. MIT press.
+\bibitem{b9} Webster, J.J. and Kit, C., 1992. Tokenization as the initial phase in NLP. In COLING 1992 volume 4: The 14th international conference on computational linguistics.
+\bibitem{b10} Van den Bosch, A. and Buchholz, S., 2002, July. Shallow parsing on the basis of words only: A case study. In Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics (pp. 433-440).
+\bibitem{b11} Hammerton, J., Osborne, M., Armstrong, S. and Daelemans, W., 2002. Introduction to the special issue on machine learning approaches to shallow parsing. Journal of machine learning research.-Cambridge, Mass., 2, pp.551-558.
+\bibitem{b12} Hashimoto, K., Xiong, C., Tsuruoka, Y. and Socher, R., 2016. A joint many-task model: Growing a neural network for multiple NLP tasks. arXiv preprint arXiv:1611.01587.
+\bibitem{b13} Schmaltz, A., Kim, Y., Rush, A., and Shieber, S. 2016. Sentence-Level Grammatical Error Identification as Sequence-to-Sequence Correction. In Proceedings of the 11th Workshop on Innovative Use of NLP for Building Educational Applications (pp. 242–251). Association for Computational Linguistics.
+\bibitem{b14} Wang, X., Liu, Y., Li, J., Miljanic, V., Zhao, S., and Khalil, H.. (2022). Towards Contextual Spelling Correction for Customization of End-to-end Speech Recognition Systems.
+\bibitem{b15} Chiu, J., and Nichols, E.. (2015). Named Entity Recognition with Bidirectional LSTM-CNNs.
+\bibitem{b16} Ma, X., and Hovy, E.. (2016). End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF.
+\bibitem{b17} Nadeau, D., and Sekine, S. 2007. A Survey of Named Entity Recognition and Classification. Lingvisticae Investigationes, 30.
+\bibitem{b18} Moradi, B., Ansari, E., and Zdeněkžabokrtsk´y, Z. 2019. Unsupervised Word Sense Disambiguation Using Word Embeddings. In undefined.
+
+
 \end{thebibliography}
 \vspace{12pt}
 \color{red}
