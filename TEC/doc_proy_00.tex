@@ -1,0 +1,222 @@
+
+\author{Hansol Antay Rostrán}
+
+%%% -------------------------------------
+%%% DEFINICIÓN DE COMANDOS (CONTENIDO TEXTUAL)
+
+% Nombre del curso
+\newcommand{\nombrecurso}{\textbf{CS3401 - Seminario de estudios filosóficos históricos}}
+
+% Institución
+\newcommand{\institucion}{\textbf{Instituto Tecnológico de Costa Rica}}
+
+% Sede
+\newcommand{\sede}{\textbf{Centro Académico de Limón}}
+
+% Nombre del profesor
+\newcommand{\nombreprofesor}{\textbf{Prof. Mag. Mauricio Cedeño Camacho}}
+
+% Titulo de la asignacion
+\newcommand{\tituloasignacion}{\textbf{Impacto ético y moral de la Inteligencia Artificial en un mundo automatizado}}
+
+% Objetivo de la tarea
+\newcommand{\objetivo}[1]{
+  \fontsize{#1}{#1}\selectfont
+  \lipsum[1]
+}
+
+% Fecha y hora de entrega
+\newcommand{\fechaentrega}{10 de marzo del 2023, a las 9:30 AM}
+
+%%% -------------------------------------
+% PARTES DEL DOCUMENTO
+
+%%% TITULO (sede, curso, nombreTarea, profesor)
+
+\newcommand{\titulo} {
+  %% Titulo del curso
+  \noindent
+  \fontsize{14}{14}\selectfont
+  \color[rgb]{0.0, 0.0, 0.5}
+  \textbf{\sede} \\
+  \textbf{\nombrecurso} \\
+  \vspace*{0.5cm}
+  \fontsize{12}{12}\selectfont
+  \color[rgb]{0.0, 0.0, 0.0}
+  \textit{\textbf{\nombreprofesor}}
+  \\ [2\baselineskip]
+  \fontsize{14}{14}\selectfont
+  \color[rgb]{0.0, 0.0, 0.5}
+  \vspace*{0.25cm}
+  \textbf{\tituloasignacion}
+  \\
+}
+
+%%% INTEGRANTES
+
+\newcommand{\integrantes}{
+  \begin{tcolorbox}[colback=yellow!10!white, colframe=black]
+    \begin{center}
+      \fontsize{12}{12}\selectfont
+      \textbf{Integrantes del equipo:}
+      \\ \vspace*{0.25cm}
+      Hansol Antay Rostrán \\
+      Randall Corella Castillo \\
+      Duan Espinoza Olívares \\
+      Bayron Rodríguez Centeno \\
+      Duvan Wing Morales \\
+    \end{center} 
+  \end{tcolorbox}
+}
+
+%%% PORTADA
+
+\newcommand{\portada}{
+  \begin{center}
+    \vspace*{3.15cm}
+    %% LOGO TEC
+    \includegraphics[width=0.62\textwidth]{img/itcr logo.png}
+    \vspace*{1.2cm}
+
+    %%% Curso, profesor
+    \titulo
+  
+    \vspace*{1.5cm}
+    
+    %%% Integrantes
+    \integrantes
+
+    % \vspace*{1cm}
+    
+    \vspace*{2cm}
+    \fontsize{12}{12}\selectfont
+    \color[rgb]{0.0, 0.0, 0.7}
+    \textbf{Fecha de entrega:} \fechaentrega
+    
+    % askaskadsk
+
+  \end{center}
+}
+
+%%% ------------------------------------
+%%% Inicio del documento
+
+% The document class is report
+\documentclass[11pt]{report}
+
+%%% PAQUETES
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{tcolorbox}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+%ToC
+\usepackage{tocloft}
+
+% Margén del documento
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% Texto de la tabla de contenidos
+\addto\captionsspanish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Índice}
+}
+
+% Hacer que las secciones empiecen con 1.1, 1.2, etc.
+\renewcommand{\thesection}{\arabic{section}}
+
+% Hacer que las subsecciones empiecen con 1.1.1, 1.1.2, etc.
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+% Cambiar el espacio entre las filas de la tabla de contenidos
+\setlength{\cftbeforesecskip}{0.5em}
+
+% Cambiar la indentación entre la numeración y el texto de la tabla de contenidos
+\cftsetindents{section}{0cm}{0.4cm}
+\cftsetindents{subsection}{0.25cm}{0.8cm}
+\cftsetindents{subsubsection}{0.5cm}{1.2cm}
+
+% Poner las secciones en negrita
+\renewcommand{\cftsecfont}{\bfseries}
+
+
+% Quitando la numeración de las secciones y subsecciones del texto
+
+% Poner las subsubsecciones en cursiva
+\renewcommand{\cftsubsubsecfont}{\itshape}
+
+
+% Idioma del documento
+\usepackage[spanish]{babel}
+
+\begin{document}
+\renewcommand\cftchapdotsep{\cftdotsep}
+\renewcommand\cftchapleader{\cftdotfill{\cftchapdotsep}}
+
+  \thispagestyle{empty}
+  
+  \portada % Lineas 72-113
+
+  \newpage
+  
+  \tableofcontents
+
+  \newpage
+
+  %\section{Introducción} % Extra
+
+  % ------------------------------------------------
+  \section{Objetivos}
+  
+
+  \subsection{Objetivo general}
+  El objetivo general de esta investigación es evaluar el impacto ético y moral de la Inteligencia
+  Artificial en un mundo automatizado, con el fin de proporcionar una guía para la toma de
+  decisiones sobre el diseño, desarrollo e implementación de este tipo de tecnologías.
+
+  \subsection{Objetivos específicos}
+  \begin{itemize}
+    \item Evaluar y denota las implicaciones que tendría la Inteligencia Artificial en la violación
+    de la privacidad y seguridad de los datos personales de las personas.
+    \item Proporcionar una guía para la toma de decisiones sobre el diseño, desarrollo e
+    implementación de sistemas basados en Inteligencia Artificial, de forma que se minimicen los
+    riesgos éticos y morales.
+    \item Analizar riesgos actuales y potenciales asociados al uso de la Inteligencia Artificial y
+    como estos pueden afectar a la sociedad en el ámbito económico, laboral y ético-social.
+  \end{itemize}
+
+  % ------------------------------------------------
+  \section{Justificación}
+  La Inteligencia Artificial cada día se vuelve más avanzada y ya está siendo utilizada en una gran
+  variedad de sectores, como la medicina, la educación, la industria, la seguridad, etc. Sin embargo,
+  es importante evaluar el impacto que esta tecnología tiene en la sociedad y en las personas desde
+  el punto de vista ético y moral.
+
+  Siempre ha existido la preocupación de que tanto impacto puede tener la Inteligencia Artificial en
+  la era de la automatización. Esta investigación tiene como objetivo proporcionar una visión general
+  y guía para la toma de decisiones sobre el impacto ético y moral de la Inteligencia Artificial
+  mediante el diseño, implementación y su aplicación en la industria.
+
+  Un enfoque muy claro de este estudio será el señalar los riesgos potenciales de la Inteligencia
+  Artificial, sobre todo en el ámbito de privacidad y seguridad de los datos, y cómo estos pueden
+  afectar a las personas. Además, se analizarán y propondrán soluciones para estos problemas.
+
+  % ------------------------------------------------
+  
+  % \section{Marco teórico}
+  % Entrega 2
+
+  % ------------------------------------------------
+  %\section{Metodología}
+  % Extra
+
+  %\section{Resultados}
+
+  % ------------------------------------------------
+  %\section{Conclusiones y recomendaciones}
+  % Entrega 3
+  
+\end{document}
