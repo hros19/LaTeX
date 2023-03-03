@@ -1,0 +1,138 @@
+
+\author{Hansol Antay Rostrán}
+
+%%% -------------------------------------
+%%% DEFINICIÓN DE COMANDOS (CONTENIDO TEXTUAL)
+
+% Nombre del curso
+\newcommand{\nombrecurso}{
+  \textbf{IC1400 - Fundamentos de Organización de Computadoras}
+}
+
+% Institución
+\newcommand{\institucion}{\textbf{Instituto Tecnológico de Costa Rica}}
+
+% Nombre del profesor
+\newcommand{\nombreprofesor}{\textbf{Ing. David R. Mora Fonseca, M. Ed.}}
+
+% Titulo de la asignacion
+\newcommand{\tituloasignacion}{\textbf{Tarea Opcional 01 - Título de ejemplo}}
+
+% Objetivo de la tarea
+\newcommand{\objetivo}[1]{
+  \fontsize{#1}{#1}\selectfont
+  \lipsum[1]
+}
+
+% Valor de la tarea
+\newcommand{\valor}[2]{
+  \fontsize{#1}{#1}\selectfont
+  \color[rgb]{#2}
+  2\%
+}
+
+% Fecha y hora de entrega
+\newcommand{\fechaentrega}{dd de mm del aaaa, a las 23:59}
+
+% Formato de grupos
+\newcommand{\formatogrupos}{1}
+
+% Indicaciones generales (ejercicios, tablas, etc.)
+\newcommand{\indicacionesgenerales}{
+  Indicaciones generales de la tarea.
+}
+
+%%% -------------------------------------
+% PARTES DE LA PORTADA, TITULO, ESPECIFICACION
+
+\newcommand{\titulo} {
+  %% Titulo del curso
+  \noindent
+  \fontsize{14}{14}\selectfont
+  \color[rgb]{0.0, 0.0, 0.5}
+  \textbf{\nombrecurso}
+  \\
+  \vspace*{0.25cm}
+  \textbf{\tituloasignacion}
+  \\
+  %% Nombre del profesor
+  \vspace*{0.5cm}
+  \fontsize{12}{12}\selectfont
+  \color[rgb]{0.0, 0.0, 0.0}
+  \textit{\textbf{\nombreprofesor}}
+}
+
+%%% -------------------------------------
+
+% Header/Encabezado de la página
+\newcommand{\encabezado}{\textbf{IC1400 - Fundamentos de Organización de Computadoras}}
+
+%%% PORTADA
+
+\newcommand{\portada}{
+  \begin{center}
+    \vspace*{3.25cm}
+    %% LOGO TEC
+    \includegraphics[width=0.62\textwidth]{img/itcr logo.png}
+    \vspace*{1.2cm}
+
+    %%% Curso, profesor
+    \titulo
+  
+    \vspace*{0.5cm}
+    
+    %%% Especificación (objetivo, valor, fecha de entrega, etc.)
+
+    \begin{tcolorbox}[colback=yellow!10!white, colframe=black]
+      \fontsize{12}{12}\selectfont
+      \textbf{Objetivo:} \objetivo{12} 
+    \end{tcolorbox}
+
+    \centering
+
+    \vspace*{1cm}
+    
+    \centering
+    \fontsize{12}{12}\selectfont
+    \color[rgb]{0.0, 0.0, 0.7}
+    \textbf{Valor de la asignación:} \valor{12}{0.0, 0.0, 0.7}
+    \\
+    \textbf{Fecha de entrega:} \fechaentrega
+    \\
+    \if \formatogrupos 1
+      \textbf{Formato de grupos:} El trabajo se realiza y se entrega individualmente.
+    \else
+      \textbf{Formato de grupos:} El trabajo se realiza en grupos de \formatogrupos personas.
+    \fi
+
+  \end{center}
+}
+
+%%% -------------------------------------
+%%% Inicio del documento
+
+% The document class is report
+\documentclass[11pt]{report}
+
+%%% PAQUETES
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{tcolorbox}
+
+% Margén del documento
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% Idioma del documento
+\usepackage[spanish]{babel}
+
+\begin{document}
+  \thispagestyle{empty}
+
+  \portada % Lineas 72-113
+
+  \newpage
+  Hola
+\end{document}
