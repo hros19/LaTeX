@@ -1,0 +1,356 @@
+
+\author{Hansol Antay Rostrán}
+
+%%% -------------------------------------
+%%% DEFINICIÓN DE COMANDOS (CONTENIDO TEXTUAL)
+
+% Nombre del profesor
+\newcommand{\nombreprofesor}{Ing. Cristopher Chanto Vargas, MAP, MBA}
+
+% Fecha y hora de entrega
+\newcommand{\fechaelaboracion}{6 de marzo del 2023}
+
+% Código del proyecto
+\newcommand{\codigoproyecto}{IC4810-2023-001}
+
+% Nombre del proyecto
+\newcommand{\nombreproyecto}{VR Surgery System (SuSy)}
+
+% Empresa u organización
+\newcommand{\empresa}{Universidad Elizabeth Blackwell}
+
+% Cliente
+\newcommand{\cliente}{Universidad Elizabeth Blackwell}
+
+% Patrocinador principal
+\newcommand{\patrocinador}{Dr. Strange}
+
+% Director del proyecto
+\newcommand{\directorproyecto}{Hansol Antay Rostrán}
+
+% Version del documento
+\newcommand{\version}{1.0}
+
+%%% -------------------------------------
+% PARTES DEL DOCUMENTO
+
+%%% TITULO (sede, curso, nombreTarea, profesor)
+
+\newcommand{\titulo} {
+  %% Titulo del curso
+  \noindent
+  \fontsize{14}{14}\selectfont
+  \color[rgb]{0.0, 0.0, 0.5}
+  \textbf{\sede} \\
+  \textbf{\nombrecurso} \\
+  \vspace*{0.5cm}
+  \fontsize{12}{12}\selectfont
+  \color[rgb]{0.0, 0.0, 0.0}
+  \textit{\textbf{\nombreprofesor}}
+  \\ [2\baselineskip]
+  \fontsize{14}{14}\selectfont
+  \color[rgb]{0.0, 0.0, 0.5}
+  \vspace*{0.25cm}
+  \textbf{\tituloasignacion}
+  \\
+}
+
+%%% INTEGRANTES
+
+\newcommand{\integrantes}{
+  \begin{tcolorbox}[colback=yellow!10!white, colframe=black]
+    \begin{center}
+      \fontsize{12}{12}\selectfont
+      \textbf{Integrantes del equipo:}
+      \\ \vspace*{0.25cm}
+      Hansol Antay Rostrán \\
+      Randall Corella Castillo \\
+      Duan Espinoza Olívares \\
+      Bayron Rodríguez Centeno \\
+      Duvan Wing Morales \\
+    \end{center} 
+  \end{tcolorbox}
+}
+
+%%% PORTADA
+
+\newcommand{\portada}{
+  \vspace*{7cm}
+  \Huge
+  \begin{center}
+    \begin{tikzpicture}
+      \fontsize{26}{26}\selectfont
+      % Draw a rectangle filled with rgb type color
+      \draw[fill=black,fill opacity=1] (2,0) rectangle (18,2.5) node[pos=.5] {
+        \color[rgb]{1,1,1}
+        \textbf{Acta de constitución de proyecto}
+      };
+
+    \end{tikzpicture}
+    \vspace*{0.25cm}
+
+    \begin{tcolorbox}[colback=yellow!10!white, colframe=black]
+      \fontsize{12}{12}\selectfont
+
+      \textbf{Nombre del proyecto:} \nombreproyecto
+      \\ \vspace*{-0.23cm} \\
+      \textbf{Código del proyecto:} \codigoproyecto
+      \\ \vspace*{-0.23cm} \\
+      \textbf{Fecha de elaboración:} \fechaelaboracion
+      \\ \vspace*{-0.23cm} \\
+      \textbf{Supervisor:} \nombreprofesor
+      \\ \vspace*{-0.23cm} \\
+      \textbf{Versión:} \version
+      \\ \vspace*{-0.23cm} \\
+      \textbf{Empresa u organización:} \empresa
+      \\ \vspace*{-0.23cm} \\
+      \textbf{Cliente:} \cliente
+      \\ \vspace*{-0.23cm} \\
+      \textbf{Patrocinador principal:} \patrocinador
+      \\ \vspace*{-0.23cm} \\
+      \textbf{Director del proyecto:} \directorproyecto
+    \end{tcolorbox}
+
+  \end{center}
+  \normalsize
+}
+
+\newcommand{\firmasaprobaciones}{
+  \vspace*{1.8cm}
+  \begin{center}
+    \begin{tabular}{ c c }
+    \noindent\makebox[0.5\textwidth]{\hrulefill} & \noindent\makebox[0.5\textwidth]{\hrulefill} \\ 
+    \color{darkblue}Firma del director de proyecto & \color{darkblue}Firma del patrocinador \vspace*{2.5cm} \\  
+    \noindent\makebox[0.5\textwidth]{\hrulefill} & \noindent\makebox[0.5\textwidth]{\hrulefill} \\ 
+    \color{darkblue}Nombre del director de proyecto & \color{darkblue}Nombre del patrocinador
+    \end{tabular}
+    \end{center}
+}
+
+%%% ------------------------------------
+%%% Inicio del documento
+
+% The document class is report
+\documentclass[11pt]{article}
+
+%%% PAQUETES
+\usepackage{xcolor} % Para definir colores
+\usepackage{geometry} % Para definir el margen del documento
+\usepackage{ragged2e} % Para justificar el texto
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{lipsum} % Para generar texto de prueba
+\usepackage{tcolorbox} % Para los cuadros de texto
+\usepackage[spanish]{babel} % Idioma
+\usepackage[T1]{fontenc} % Fuente (opcional)
+\usepackage{tocloft} % Para cambiar la tabla de contenidos
+\usepackage{tikz} % Para dibujar figuras
+\usepackage{titleps} % Para el encabezado
+\usepackage{sectsty} % Para cambiar el formato de las secciones
+\usepackage{hyperref} % Para agregar hipervínculos
+\usepackage{lastpage} % Para mostrar el número de página
+\usepackage{titletoc}
+\usepackage{colortbl} % Para cambiar el color de las celdas de la tabla
+
+% Margén del documento
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+\setcounter{tocdepth}{3}
+
+%%% -------------------------------------
+% Texto de la tabla de contenidos
+\addto\captionsspanish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Índice}
+}
+
+% Hacer que las secciones empiecen con 1, 2, etc.
+\renewcommand{\thesection}{\arabic{section}}
+
+% Hacer que las subsecciones empiecen con 1.1, 1.2, etc.
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+% Hacer que las subsubsecciones empiecen con 1.1.A, 1.1.B, etc. (NOT ARABIC)
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% Quitando la numeración de las secciones y subsecciones del texto
+
+
+% Definición de los colores de las secciones y subsecciones
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{lightblue}{rgb}{0.2, 0.4, 0.8}
+\definecolor{darkorange}{rgb}{0.9, 0.4, 0}
+\definecolor{lightred}{rgb}{0.9, 0.2, 0.2}
+
+% Colores de hipervínculos
+\hypersetup{
+  % colorlinks=true,
+  filecolor=magenta,      
+  urlcolor=cyan,
+  linkcolor=lightred,
+  citecolor=green,
+  linktoc=all
+}
+
+% Seccion con color darkblue, negrita, tamaño 12 y con puntos hasta la derecha
+\titlecontents{section}
+    [8pt]
+    {\color{darkblue}\bfseries\fontsize{12}{12}\selectfont}
+    {\contentslabel{1.5em}}
+    {\hspace*{-2.5em}}
+    {\titlerule*[.5pc]{.\hskip-0.5em}\contentspage \vspace*{0.2cm}}
+
+\titlecontents{subsection}
+    [32pt]
+    {\color{lightblue}\bfseries\fontsize{12}{12}\selectfont}
+    {\contentslabel{2em}}
+    {\hspace*{-2.5em}}
+    {\titlerule*[.5pc]{.\hskip-0.5em}\contentspage \vspace*{0.1cm}}
+
+\titlecontents{subsubsection}
+    [60pt]
+    {\color{lightred}\itshape\fontsize{12}{12}\selectfont}
+    {\contentslabel{2.4em}}
+    {\hspace*{-2.5em}}
+    {\titlerule*[.5pc]{.\hskip-0.5em}\contentspage \vspace*{0.1cm}}
+
+%%% -------------------------------------
+
+% Idioma del documento
+\usepackage[spanish]{babel}
+
+\begin{document}
+
+  % Encabezado
+  \newpagestyle{main}{
+    \setheadrule{.25pt}% Header rule
+    \sethead{\color{darkblue}\textbf{\codigoproyecto}, \textit{\nombreproyecto}.}% left
+            {}%                 center
+            {\color{darkblue}Versión \textbf{\version}}%    right
+  
+    % Enumeración de páginas con el total de páginas
+    \setfootrule{.25pt}% Footer rule
+    \setfoot{\itshape \color{darkorange}\nombreproyecto. \empresa.}% left
+            {}%                 center
+            {\color{darkblue}Pág. \thepage\ de \color{lightred}\pageref{LastPage}}
+  }%    right
+  
+
+  % Portada sin numeración
+  \pagestyle{empty}
+  
+  \portada
+
+  \newpage
+
+  \pagestyle{empty}
+
+  % Cambiar el color de las secciones de la tabla de contenidos, manteniendo el hipervínculo
+  \sectionfont{\color{darkblue}\normalfont\Large\bfseries}
+  
+  \tableofcontents
+
+  \newpage
+
+  \pagestyle{main}
+
+  % Cambiar el color de las secciones (no de la tabla de contenidos)
+  \sectionfont{\color{darkblue}\normalfont\Large\bfseries}
+  \subsectionfont{\color{lightblue}\normalfont\large\bfseries}
+  \subsubsectionfont{\color{lightred}\normalfont\large\itshape}
+
+  % ------------------------------------------------
+  
+  \section{Propósito y justificación del proyecto}
+  Este proyecto tiene como propósito principal crear un sistema de realidad virtual llamado VR Surgery System (SuSy) que sirva como herramienta
+  de entrenamiento para tanto profesionales especiales y estudiantes avanzados
+  de medicina de la Universidad Elizabeth Blackwell.
+
+  La creación de este sistema es importante debido a que la simulación de 
+  cirugías es una parte clave en la formación de profesionales de la salud.
+  Permite adquirir habilidades, experiencias y destrezas en un ambiente simulado que es seguro y controlado, sin necesidad de poner en riesgo la 
+  salud de pacientes reales. El uso de esta tecnología brindaría una mejor
+  calidad de formación y precisión en la práctica de técnicas quirúrgicas, lo
+  que tendría un impacto positivo en la calidad de atención médica que se
+  brinda a los pacientes.
+
+  \section{Descripción del proyecto}
+  La Universidad Elizabeth Blackwell desea crear un sistema de realidad virtual llamado VR Surgery System (SuSy) para la simulación de cirugías. El objetivo del sistema es entrenar tanto a los doctores especialistas como a los estudiantes avanzados de medicina en un ambiente virtual, que les permita practicar sus habilidades y aprender de forma segura sin poner en riesgo la vida de los pacientes. La universidad busca la ayuda de un equipo consultor externo para realizar la administración del proyecto de análisis y diseño del sistema.
+  \section{Requerimientos de alto nivel}
+  \begin{itemize}
+    \item Debe permitir la simulación de cirugías en un ambiente de realidad virtual inmersivo, con la posibilidad de interactuar con el entorno y los objetos virtuales.
+    \item Debe ser capaz de representar de forma realista casos de cirugía de alta complejidad, casos extraordinarios y casos de emergencia que permitan
+    representar situaciones que no se pueden simular en un entorno real.
+    \item Debe ofrecer una interfaz de usuario intuitiva y fácil de usar.
+    \item Debe permitir la integración de hardware y software para el
+    correcto funcionamiento del sistema.
+  \end{itemize}
+  \section{Riesgos principales}
+  \begin{itemize}
+    \item Retraso en el desarrollo del proyecto, debido a complicaciones en la integración de hardware y software.
+    \item No contar con la tecnología suficiente para realizar simulaciones de
+    cirugía de alta precisión, que además, reflejen un alto grado de realismo.
+    \item No disponer de la capacidad financiera suficiente para la completitud
+    del proyecto.
+  \end{itemize}
+
+  \section{Objetivos}
+  \begin{itemize}
+    \item Permitir el entrenamiento de estudiantes y profesionales de la salud en la realización de cirugías complejas.
+    \item Permitir la simulación de casos de emergencia y casos extraordinarios para entrenar la toma de decisiones en situaciones de alto riesgo.
+    \item Desarrollo de una interfaz de usuario intuitiva y fácil de usar.
+    \item Terminar el proyecto en el tiempo establecido y con el presupuesto
+    establecido.
+  \end{itemize}
+
+  \section{Listado de hitos}
+
+  \begin{table}[h]
+    \centering
+    \caption{Tabla de hitos del proyecto VR Surgery System}
+    \begin{tabular}{|p{7.5cm}|p{2.3cm}|p{2.2cm}|p{2.2cm}|}
+      \hline
+      \rowcolor[HTML]{E6E6FA}
+      \textbf{\color{darkblue}Hito} & \textbf{\color{darkblue}Estado} & \textbf{\color{darkblue}Inicio} & \textbf{\color{darkblue}Fin} \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F0FFFC} Análisis y diseño del sistema & \cellcolor{yellow!25} En proceso & \cellcolor[HTML]{F0FFFC} 01/03/2023 & \cellcolor[HTML]{F0FFFC} 10/04/2023 \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F6FFFD} Elaboración de prototipos & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/07/2023 & \cellcolor[HTML]{F6FFFD} 31/07/2023 \\ \hline
+      %\rowcolor[HTML]{F5F5F5}
+      \cellcolor[HTML]{F0FFFC} Desarrollo del software & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/08/2023 & \cellcolor[HTML]{F0FFFC} 30/09/2023 \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F6FFFD} Pruebas de campo y correcciones & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/10/2023 & \cellcolor[HTML]{F6FFFD} 31/12/2023 \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F0FFFC} Puesta en producción del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/01/2024 & \cellcolor[HTML]{F0FFFC} 28/02/2024 \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F6FFFD} Capacitación del personal & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/03/2024 & \cellcolor[HTML]{F6FFFD} 31/03/2024 \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F0FFFC} Simulaciones de cirugías & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/04/2024 & \cellcolor[HTML]{F0FFFC} 30/06/2024 \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F6FFFD} Evaluación del rendimiento del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/07/2024 & \cellcolor[HTML]{F6FFFD} 31/07/2024 \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F0FFFC} Ajustes y mejoras del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/08/2024 & \cellcolor[HTML]{F0FFFC} 30/09/2024 \\ \hline
+      %\rowcolor[HTML]{003C87}
+      \cellcolor[HTML]{F6FFFD} Entrega del sistema a la Universidad & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/10/2024 & \cellcolor[HTML]{F6FFFD} 31/10/2024 \\ \hline
+      %\rowcolor[HTML]{003C87}
+    \end{tabular}
+
+  \end{table}
+
+  \section{Presupuesto estimado}
+  \lipsum[1-2]
+
+  \section{Niveles de autoridad del proyecto}
+  \begin{itemize}
+    \item El rector de la universidad, el Dr. Strange, será el encargado de autorizar los fondos necesarios para llevar a cabo el proyecto y de tomar las decisiones finales en caso de que se requieran cambios importantes en la planificación del proyecto.
+    \item La jefa de cirugía, la Dra. Claire Temple, y la directora de la carrera de la facultad, la Dra. Leslie Maurin Thompkins, serán las principales interesadas en el proyecto y estarán involucradas en la toma de decisiones relacionadas con los requerimientos y objetivos del sistema.
+  \end{itemize}
+
+  \section{Criterios de aprobación}
+  El éxito del proyecto se medirá por la capacidad del sistema para cumplir con los objetivos establecidos en los requerimientos iniciales. La aceptación y aprobación del sistema dependerá de su capacidad para simular cirugías de manera realista y permitir un entrenamiento efectivo para los doctores especialistas y estudiantes de medicina avanzados.
+
+  Además, el proyecto debe cumplir con los estándares de calidad y seguridad requeridos por la universidad y las regulaciones aplicables en el sector de la salud. La implementación del sistema debe ser exitosa y debe contar con el soporte y la capacitación adecuada para los usuarios finales.
+
+  \section{Aprobaciones}
+  \firmasaprobaciones
+
+\end{document}
