@@ -1,0 +1,159 @@
+
+\author{Hansol Antay Rostrán}
+
+%%% -------------------------------------
+%%% DEFINICIÓN DE COMANDOS (CONTENIDO TEXTUAL)
+
+% Nombre del curso
+\newcommand{\nombrecurso}{
+  \textbf{IC6200 - Inteligencia Artificial}
+}
+
+% Institución
+\newcommand{\institucion}{\textbf{Instituto Tecnológico de Costa Rica}}
+
+% Nombre del profesor
+\newcommand{\nombreprofesor}{\textbf{Ing. David R. Mora Fonseca, M. Ed.}}
+
+% Titulo de la asignacion
+\newcommand{\tituloasignacion}{\textbf{Guía de ejercicios/preguntas - Búsqueda controlada}}
+
+% Objetivo de la tarea
+\newcommand{\objetivo}[1]{
+  \fontsize{#1}{#1}\selectfont
+  Desarrollar competencias para aplicar la búsqueda controlada en la resolución de problemas de inteligencia artificial, a través de la comprensión de los principios fundamentales, la familiarización con los algoritmos de búsqueda controlada, el aprendizaje de su aplicación en diferentes dominios, la práctica en la implementación de algoritmos en programas de computadora, la evaluación y comparación de diferentes estrategias de búsqueda controlada, la comprensión de los desafíos y limitaciones asociados con la búsqueda controlada y su abordaje, y la aplicación de los conocimientos adquiridos en la resolución de problemas de la vida real
+}
+
+% Valor de la tarea
+\newcommand{\valor}[2]{
+  \fontsize{#1}{#1}\selectfont
+  \color[rgb]{#2}
+  2\%
+}
+
+% Fecha y hora de entrega
+\newcommand{\fechaentrega}{}
+
+% Formato de grupos
+\newcommand{\formatogrupos}{1}
+
+% Indicaciones generales (ejercicios, tablas, etc.)
+\newcommand{\indicacionesgenerales}{
+  Indicaciones generales de la tarea.
+}
+
+%%% -------------------------------------
+% PARTES DE LA PORTADA, TITULO, ESPECIFICACION
+
+\newcommand{\titulo} {
+  %% Titulo del curso
+  \noindent
+  \fontsize{14}{14}\selectfont
+  \color[rgb]{0.0, 0.0, 0.5}
+  \textbf{\nombrecurso}
+  \\
+  \vspace*{0.25cm}
+  \textbf{\tituloasignacion}
+  \\
+  %% Nombre del profesor
+  \vspace*{0.5cm}
+  \fontsize{12}{12}\selectfont
+  \color[rgb]{0.0, 0.0, 0.0}
+  \textit{\textbf{\nombreprofesor}}
+}
+
+%%% -------------------------------------
+
+% Header/Encabezado de la página
+\newcommand{\encabezado}{\textbf{IC1400 - Fundamentos de Organización de Computadoras}}
+
+%%% PORTADA
+
+\newcommand{\portada}{
+  \begin{center}
+    \vspace*{3.25cm}
+    %% LOGO TEC
+    \includegraphics[width=0.62\textwidth]{img/itcr logo.png}
+    \vspace*{1.2cm}
+
+    %%% Curso, profesor
+    \titulo
+  
+    \vspace*{0.5cm}
+    
+    %%% Especificación (objetivo, valor, fecha de entrega, etc.)
+
+    \begin{tcolorbox}[colback=yellow!10!white, colframe=black]
+      \fontsize{12}{12}\selectfont
+      \textbf{Objetivo:} \objetivo{12} 
+    \end{tcolorbox}
+
+    \centering
+
+    \vspace*{1cm}
+    
+    \centering
+    \fontsize{12}{12}\selectfont
+    \color[rgb]{0.0, 0.0, 0.7}
+    %%\textbf{Valor de la asignación:} \valor{12}{0.0, 0.0, 0.7}
+    
+    %%\textbf{Fecha de entrega:} \fechaentrega
+
+    \if \formatogrupos 1
+      \textbf{Formato de grupos:} El trabajo se realiza y se entrega individualmente.
+    \else
+      \textbf{Formato de grupos:} El trabajo se realiza en grupos de \formatogrupos personas.
+    \fi
+
+  \end{center}
+}
+
+%%% -------------------------------------
+%%% Inicio del documento
+
+% The document class is report
+\documentclass[11pt]{report}
+
+%%% PAQUETES
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{tcolorbox}
+
+% Margén del documento
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% Idioma del documento
+\usepackage[spanish]{babel}
+
+\begin{document}
+  \thispagestyle{empty}
+
+  \portada % Lineas 72-113
+
+  \newpage
+  \section*{Guía de preguntas y ejercicios}
+
+  % Lista ordenada
+  \begin{enumerate}
+    \item Define en tus propias palabras los siguientes términos: estado, espacio de estados, árbol de búsqueda, nodo de búsqueda, objetivo, acción, modelo de transición y factor de ramificación.
+    \item Considere el problema de los misioneros y caníbales en el que hay tres misioneros y tres caníbales en un lado de un río y hay un bote disponible que puede llevar a dos personas al otro lado del río. El objetivo es llevar a todos los misioneros y caníbales al otro lado del río sin dejar que haya más caníbales que misioneros en cualquier lado del río en ningún momento. Modele el problema y resuélvalo utilizando la búsqueda en profundidad limitada.
+    \item Proporcione una formulación completa para cada uno de los siguientes problemas.
+    \begin{itemize}
+      \item Un robot debe limpiar un cuarto de 5x5 metros cuadrados. El robot tiene un sensor de suciedad que le indica si hay suciedad en la casilla en la que se encuentra. El robot puede moverse en una casilla adyacente en cualquier dirección (arriba, abajo, izquierda o derecha). El robot tiene un depósito de 10 litros de agua que puede vaciar en cualquier casilla. El robot puede limpiar una casilla si hay suciedad en ella. El robot puede vaciar el depósito de agua en cualquier
+      casilla, independientemente de si hay suciedad en ella o no.
+      \item De forma general se tiene una secuencia con los símbolos A, B, C y E, por ejemplo, podría ser la secuencia ABABAECCEC. Se puede transformar dicha secuencia siguiendo las siguientes reglas: AC = E, AB = BC, BB = E y Ex = x. El objetivo es producir la secuencia E.
+      \item Hay una cuadrícula de n × n de cuadrados, donde cada cuadrado inicialmente es o bien un piso sin pintar o un pozo sin fondo. Empiezas parado en un cuadrado de piso sin pintar y puedes pintar el cuadrado debajo de ti o moverte a un cuadrado adyacente de piso sin pintar. Quieres que todo el piso esté pintado.
+    \end{itemize}
+    \item A veces no existe una buena función de evaluación para un problema, pero sí un buen método de comparación: una forma de saber si un nodo es mejor que otro sin asignar valores numéricos a ninguno. Demuestra que esto es suficiente para realizar un best-first search. ¿Existe un análogo de A* para esta configuración?
+    \item Se tiene un tablero de 9×9 cuadrados, cada uno de los cuales se puede colorear de rojo o azul. La cuadrícula inicialmente está coloreada toda de azul, pero puedes cambiar el color de cualquier cuadrado cualquier número de veces. Imaginando la cuadrícula inicial dividida en nueve subcuadrículas de 3×3, quieres que cada subcuadrícula sea de un solo color pero que las subcuadrículas adyacentes sean de diferentes colores.
+    \begin{itemize}
+      \item Formule este problema de manera directa. Calcule el tamaño del espacio de estados.
+      \item Solo necesita colorear un cuadrado una vez. Reformule y calcule el tamaño del espacio de estados. ¿La \textit{breadth-first graph search} se desempeñaría más rápido en este problema que en el acercamiento del punto anterior? ¿Qué hay del árbol de búsqueda de profundización iterativa?
+      \item Dada la meta, solo necesitamos considerar las coloraciones donde cada subcuadrícula está uniformemente coloreada. Reformule el problema y calcule el tamaño del espacio de estados.
+      \item ¿Cuántas soluciones tiene este problema?
+    \end{itemize}
+  \end{enumerate}
+\end{document}
