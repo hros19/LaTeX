@@ -10,11 +10,14 @@
 \newcommand{\anolectivo}{
     \year
 }
-\newcommand{\nota}{100}
+\newcommand{\nota}{14}
+
+\newcommand{\notamaxima}{15}
+
+\newcommand{\notareprobado}{10} % si es menor a esto, sale rojo
+
 \newcommand{\porcentajeobtenido}{
-    %  Calcular el porcentaje obtenido con la nota
-    % Retornar (nota/100)*\valorporcentual sin condicionales
-    \numexpr\nota/100*\valorporcentual\relax
+    \numexpr\nota/\notamaxima*\valorporcentual\relax
 }
 \newcommand{\estudiantes}{
     Estudiante 1, Estudiante 2, Estudiante 3
@@ -87,7 +90,7 @@
 
     \newcommand{\colornota}{
         % si es menor a 70, entonces retorna red, de lo contrario retorna green
-        \ifnum\nota<70 red \else green \fi
+        \ifnum\nota<\notareprobado red \else green \fi
     }
 
     \definecolor{golden}{rgb}{1, 0.84, 0}
@@ -100,28 +103,28 @@
 
         % Use default LaTeX font
         \fontfamily{cmr}
-        \ifnum\nota<70
+        \ifnum\nota<\notareprobado
             \node[rectangle, fill=softred, text=black, text width=9.5cm*0.3, minimum height=1cm] at (12cm*0.7,0) {
-                \textbf{$\frac{\nota}{100}$} \ pts.
+                \textbf{$\frac{\nota}{\notamaxima}$} \ pts.
                     % Redondear lo de abajo a 2 decimales
-                    \pgfmathparse{\nota / 100 * \valorporcentual}
+                    \pgfmathparse{\nota / \notamaxima * 100}
                     % Set sfdefault as font for the next text
                     (\num[round-mode=places,round-precision=1]{\pgfmathresult}\%)
             };
         \else
-            \ifnum\nota>99
+            \ifnum\nota=\notamaxima
                 \node[rectangle, fill=golden, text=black, text width=9.5cm*0.3, minimum height=1cm] at (12cm*0.7,0) {
-                    \textbf{$\frac{\nota}{100}$} \ pts.
+                    \textbf{$\frac{\nota}{\notamaxima}$} \ pts.
                     % Redondear lo de abajo a 2 decimales
-                    \pgfmathparse{\nota / 100 * \valorporcentual}
+                    \pgfmathparse{\nota / \notamaxima * 100}
                     % Set sfdefault as font for the next text
                     (\num[round-mode=places,round-precision=1]{\pgfmathresult}\%)
                 };
             \else
                 \node[rectangle, fill=green, text=black, text width=9.5cm*0.3, minimum height=1cm] at (12cm*0.7,0) {
-                    \textbf{$\frac{\nota}{100}$} \ pts.
+                    \textbf{$\frac{\nota}{\notamaxima}$} \ pts.
                     % Redondear lo de abajo a 2 decimales
-                    \pgfmathparse{\nota / 100 * \valorporcentual}
+                    \pgfmathparse{\nota / \notamaxima * 100}
                     % Set sfdefault as font for the next text
                     (\num[round-mode=places,round-precision=1]{\pgfmathresult}\%)
                 };
