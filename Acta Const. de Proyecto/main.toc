@@ -1,12 +1,11 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Propósito y justificación del proyecto}{3}{section.1}%
-\contentsline {section}{\numberline {2}Descripción del proyecto}{3}{section.2}%
-\contentsline {section}{\numberline {3}Requerimientos de alto nivel}{3}{section.3}%
-\contentsline {section}{\numberline {4}Riesgos principales}{3}{section.4}%
-\contentsline {section}{\numberline {5}Objetivos}{4}{section.5}%
-\contentsline {section}{\numberline {6}Listado de hitos}{4}{section.6}%
-\contentsline {section}{\numberline {7}Presupuesto estimado}{4}{section.7}%
-\contentsline {section}{\numberline {8}Niveles de autoridad del proyecto}{5}{section.8}%
-\contentsline {section}{\numberline {9}Criterios de aprobación}{5}{section.9}%
-\contentsline {section}{\numberline {10}Aprobaciones}{5}{section.10}%
+\contentsline {section}{\numberline {2}Visión de proyecto}{3}{section.2}%
+\contentsline {section}{\numberline {3}Información histórica relevante}{3}{section.3}%
+\contentsline {section}{\numberline {4}Objetivos}{3}{section.4}%
+\contentsline {section}{\numberline {5}Equipo de proyecto}{4}{section.5}%
+\contentsline {section}{\numberline {6}Alcance}{4}{section.6}%
+\contentsline {section}{\numberline {7}Supuestos}{6}{section.7}%
+\contentsline {section}{\numberline {8}Restricciones}{7}{section.8}%
+\contentsline {section}{\numberline {9}Aprobaciones}{8}{section.9}%
 \contentsfinish 

@@ -8,25 +8,25 @@
 \newcommand{\nombreprofesor}{Ing. Cristopher Chanto Vargas, MAP, MBA}
 
 % Fecha y hora de entrega
-\newcommand{\fechaelaboracion}{6 de marzo del 2023}
+\newcommand{\fechaelaboracion}{8 de marzo del 2023}
 
 % Código del proyecto
 \newcommand{\codigoproyecto}{IC4810-2023-001}
 
 % Nombre del proyecto
-\newcommand{\nombreproyecto}{VR Surgery System (SuSy)}
+\newcommand{\nombreproyecto}{HR Cloud System}
 
 % Empresa u organización
-\newcommand{\empresa}{Universidad Elizabeth Blackwell}
+\newcommand{\empresa}{Rob's Home Distributions}
 
 % Cliente
-\newcommand{\cliente}{Universidad Elizabeth Blackwell}
+\newcommand{\cliente}{Rob's Home Distributions}
 
 % Patrocinador principal
-\newcommand{\patrocinador}{Dr. Strange}
+\newcommand{\patrocinador}{Rob's Home Distributions}
 
 % Director del proyecto
-\newcommand{\directorproyecto}{Hansol Antay Rostrán}
+\newcommand{\directorproyecto}{Andy Cruz Elizondo}
 
 % Version del documento
 \newcommand{\version}{1.0}
@@ -108,6 +108,8 @@
       \\ \vspace*{-0.23cm} \\
       \textbf{Patrocinador principal:} \patrocinador
       \\ \vspace*{-0.23cm} \\
+      \textbf{Stakeholder principal:} Carl Johnston
+      \\ \vspace*{-0.23cm} \\
       \textbf{Director del proyecto:} \directorproyecto
     \end{tcolorbox}
 
@@ -150,6 +152,7 @@
 \usepackage{lastpage} % Para mostrar el número de página
 \usepackage{titletoc}
 \usepackage{colortbl} % Para cambiar el color de las celdas de la tabla
+\usepackage{float}
 
 % Margén del documento
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
@@ -180,6 +183,7 @@
 \definecolor{lightblue}{rgb}{0.2, 0.4, 0.8}
 \definecolor{darkorange}{rgb}{0.9, 0.4, 0}
 \definecolor{lightred}{rgb}{0.9, 0.2, 0.2}
+\definecolor{verylightyellow}{rgb}{1, 1, 0.8}
 
 % Colores de hipervínculos
 \hypersetup{
@@ -261,94 +265,195 @@
   % ------------------------------------------------
   
   \section{Propósito y justificación del proyecto}
-  Este proyecto tiene como propósito principal crear un sistema de realidad virtual llamado VR Surgery System (SuSy) que sirva como herramienta
-  de entrenamiento para tanto profesionales especiales y estudiantes avanzados
-  de medicina de la Universidad Elizabeth Blackwell.
+  El propósito principal del proyecto es implementar un sistema de gestión de recursos en la nube para una empresa que busca mejorar la eficiencia de sus operaciones, modernizando sus procesos y tecnologías de información.
 
-  La creación de este sistema es importante debido a que la simulación de 
-  cirugías es una parte clave en la formación de profesionales de la salud.
-  Permite adquirir habilidades, experiencias y destrezas en un ambiente simulado que es seguro y controlado, sin necesidad de poner en riesgo la 
-  salud de pacientes reales. El uso de esta tecnología brindaría una mejor
-  calidad de formación y precisión en la práctica de técnicas quirúrgicas, lo
-  que tendría un impacto positivo en la calidad de atención médica que se
-  brinda a los pacientes.
+  La implementación de este sistema tendrá un impacto directo en la eficacia de la gestión de recursos humanos, optimización de procesos de reclutamiento, selección y capacitación de personal, automatización de diversos procesos administrativos, y mejora de la comunicación entre los empleados y la empresa. Adicionalmente esta solución permitirá a la empresa aprovechar las ventajas de la nube, como la escalabilidad, la disponibilidad, la seguridad y la facilidad de uso brindando a la empresa una ventaja competitiva en cuanto a la gestión de sus recursos humanos haciendo uso de tecnologías en la nube. Todo esto manteniendo los estándares de calidad, seguridad, accesibilidad y confidencialidad que la empresa requiere.
 
-  \section{Descripción del proyecto}
-  La Universidad Elizabeth Blackwell desea crear un sistema de realidad virtual llamado VR Surgery System (SuSy) para la simulación de cirugías. El objetivo del sistema es entrenar tanto a los doctores especialistas como a los estudiantes avanzados de medicina en un ambiente virtual, que les permita practicar sus habilidades y aprender de forma segura sin poner en riesgo la vida de los pacientes. La universidad busca la ayuda de un equipo consultor externo para realizar la administración del proyecto de análisis y diseño del sistema.
-  \section{Requerimientos de alto nivel}
-  \begin{itemize}
-    \item Debe permitir la simulación de cirugías en un ambiente de realidad virtual inmersivo, con la posibilidad de interactuar con el entorno y los objetos virtuales.
-    \item Debe ser capaz de representar de forma realista casos de cirugía de alta complejidad, casos extraordinarios y casos de emergencia que permitan
-    representar situaciones que no se pueden simular en un entorno real.
-    \item Debe ofrecer una interfaz de usuario intuitiva y fácil de usar.
-    \item Debe permitir la integración de hardware y software para el
-    correcto funcionamiento del sistema.
-  \end{itemize}
-  \section{Riesgos principales}
-  \begin{itemize}
-    \item Retraso en el desarrollo del proyecto, debido a complicaciones en la integración de hardware y software.
-    \item No contar con la tecnología suficiente para realizar simulaciones de
-    cirugía de alta precisión, que además, reflejen un alto grado de realismo.
-    \item No disponer de la capacidad financiera suficiente para la completitud
-    del proyecto.
-  \end{itemize}
+  \section{Visión de proyecto}
+  El proyecto tiene como visión principal proporcionar a la empresa un sistema de gestión de recursos humanos en la nube que mejore la eficiencia de sus procesos, permita una gestión más eficiente y segura de los datos de los empleados, y que permita adaptarse sin problemas a los continuos cambios de la empresa. Al concretar el plazo establecido el equipo de proyecto habrá logrado crear una solución que permita a la empresa aprovechar todas las ventajas de la nube en el área de gestión de recursos humanos. Adicionalmente, se va a asegurar que todo el personal esté capacitado en el uso del sistema, que proporcionará una interfaz agradable, rápida y fácil de usar.
+
+  \section{Información histórica relevante}
+  Rob's Home Distributions es una empresa encargada de distribución de línea blanca, mobiliario y todo tipo de productos para el hogar con una trayectoria de treinta años, 18 de estos en el mercado internacional. Actualmente cuenta con puntos de ensamblaje, distribución y venta de productos en 37 países del mundo y cuenta con más 5000 de empleados.
 
   \section{Objetivos}
+  \noindent
+  \textbf{Objetivo general}
+  \\ \newline
+  Mejorar la gestión operativa que realiza el Departamento de Recursos Humanos de la empresa cliente.
+  \\ \newline
+  \textbf{Objetivos específicos}
+  \noindent
   \begin{itemize}
-    \item Permitir el entrenamiento de estudiantes y profesionales de la salud en la realización de cirugías complejas.
-    \item Permitir la simulación de casos de emergencia y casos extraordinarios para entrenar la toma de decisiones en situaciones de alto riesgo.
-    \item Desarrollo de una interfaz de usuario intuitiva y fácil de usar.
-    \item Terminar el proyecto en el tiempo establecido y con el presupuesto
-    establecido.
+    \item Garantizar la escalabilidad del producto del proyecto mediante la logística aplicada en el desarrollo de este.
+    \item Velar por la integridad de la información que se resguarda y se manipula por el equipo de trabajo de la empresa.
+    \item Optimizar los recursos destinados para el comienzo y puesta en marcha del producto a desarrollar.
+    \item Implementar estrategias de diseño destinadas a procesamiento e intercambio de información con el sistema soporte concurrencia de datos de manera eficiente.
   \end{itemize}
 
-  \section{Listado de hitos}
+  \section{Equipo de proyecto}
 
-  \begin{table}[h]
-    \centering
-    \caption{Tabla de hitos del proyecto VR Surgery System}
-    \begin{tabular}{|p{7.5cm}|p{2.3cm}|p{2.2cm}|p{2.2cm}|}
-      \hline
-      \rowcolor[HTML]{E6E6FA}
-      \textbf{\color{darkblue}Hito} & \textbf{\color{darkblue}Estado} & \textbf{\color{darkblue}Inicio} & \textbf{\color{darkblue}Fin} \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F0FFFC} Análisis y diseño del sistema & \cellcolor{yellow!25} En proceso & \cellcolor[HTML]{F0FFFC} 01/03/2023 & \cellcolor[HTML]{F0FFFC} 10/04/2023 \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F6FFFD} Elaboración de prototipos & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/07/2023 & \cellcolor[HTML]{F6FFFD} 31/07/2023 \\ \hline
-      %\rowcolor[HTML]{F5F5F5}
-      \cellcolor[HTML]{F0FFFC} Desarrollo del software & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/08/2023 & \cellcolor[HTML]{F0FFFC} 30/09/2023 \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F6FFFD} Pruebas de campo y correcciones & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/10/2023 & \cellcolor[HTML]{F6FFFD} 31/12/2023 \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F0FFFC} Puesta en producción del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/01/2024 & \cellcolor[HTML]{F0FFFC} 28/02/2024 \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F6FFFD} Capacitación del personal & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/03/2024 & \cellcolor[HTML]{F6FFFD} 31/03/2024 \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F0FFFC} Simulaciones de cirugías & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/04/2024 & \cellcolor[HTML]{F0FFFC} 30/06/2024 \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F6FFFD} Evaluación del rendimiento del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/07/2024 & \cellcolor[HTML]{F6FFFD} 31/07/2024 \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F0FFFC} Ajustes y mejoras del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/08/2024 & \cellcolor[HTML]{F0FFFC} 30/09/2024 \\ \hline
-      %\rowcolor[HTML]{003C87}
-      \cellcolor[HTML]{F6FFFD} Entrega del sistema a la Universidad & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/10/2024 & \cellcolor[HTML]{F6FFFD} 31/10/2024 \\ \hline
-      %\rowcolor[HTML]{003C87}
-    \end{tabular}
+  \begin{table}[H]
+        \centering
+        \caption{Listado de miembros del equipo de proyecto}
+        \begin{tabular}{|p{4.5cm}|p{3.9cm}|p{3.5cm}|p{2cm}|}
+            \hline
+            \rowcolor{darkblue}
+            \color{white} Nombre & \color{white} Rol & \color{white} Correo & \color{white} Teléfono \\ \hline
 
-  \end{table}
+            \rowcolor{verylightyellow}
+            \color{darkblue} Andy Cruz Elizondo  &
+            \color{darkblue} Gerente de proyecto  &
+            \color{darkblue} a.cruz@cloud.cr &
+            \color{darkblue} 80100001\\ \hline
 
-  \section{Presupuesto estimado}
-  \lipsum[1-2]
+            \rowcolor{verylightyellow}
+            \color{darkblue} Cristopher Zúñiga Jiménez &
+            \color{darkblue} Arquitecto en la nube &
+            \color{darkblue} c.zuñiga@cloud.cr &
+            \color{darkblue} 80808080\\ \hline
 
-  \section{Niveles de autoridad del proyecto}
+            \rowcolor{verylightyellow}
+            \color{darkblue} Enzo Morales Myers &
+            \color{darkblue} Especialista en seguridad &
+            \color{darkblue} e.morales@cloud.cr &
+            \color{darkblue} 85854040 \\ \hline
+
+            \rowcolor{verylightyellow}
+            \color{darkblue} Hansol Antay Rostrán &
+            \color{darkblue} Especialista en bases de datos &
+            \color{darkblue} h.antay@cloud.cr &
+            \color{darkblue} 88888888 \\ \hline
+        \end{tabular}
+    \end{table}
+    
+
+    \textbf{Nota:} se incorporó a Hansol Antay Rostrán como especialista en bases de datos para el proyecto por las siguientes razones:
+
+    \begin{itemize}
+      \item Se requiere de un experto para el diseño, implementación y mantenimiento de las bases de datos del sistema.
+      \item Un especialista en bases de datos permitirá optimizar el rendimiento del sistema y garantizar la integridad de los datos.
+      \item Permitirá asegurar un cumplimiento en los estándares de seguridad y privacidad de los datos.
+      \item Durante todo el proyecto se dispondrá de un experto que permita identificar riesgos asociados a la implementación del sistema y proporcionará soluciones preventivas y correctivas según sea el caso.
+    \end{itemize}
+  
+  \section{Alcance}
+  \noindent
+  \textbf{Gestor de asistencia}
+  \\ \newline
+  Se requiere un sistema de detección de asistencia que comprenda tanto componentes de software como de hardware. En dicho sistema se incluirá un escáner biométrico para que los trabajadores puedan registrarse de manera rápida y precisa. Este escáner reconocerá las características únicas de cada individuo, como la huella dactilar o el reconocimiento facial, lo que permitirá vincular automáticamente al trabajador con su registro de asistencia. Con este sistema de detección de asistencia se logrará marcar con precisión tanto la hora de entrada como la de salida de los trabajadores, lo cual permitirá llevar un registro preciso de las horas trabajadas por cada uno de ellos. De esta manera, se podrá realizar un seguimiento detallado de la asistencia de los empleados, lo cual será de gran ayuda para la gestión de la nómina y la evaluación del desempeño laboral.
+  \\ \newline
+  \textbf{Gestión del rendimiento}
+  \\ \newline
+  Este apartado permitirá a los profesionales en recursos humanos elaborar un documento de gestión de rendimiento en el que se definirá el lapso evaluado y se especificará el rendimiento correspondiente. Asimismo, se incluirán los comentarios pertinentes sobre el trabajo realizado. Es importante señalar que dicha información estará permanentemente vinculada al trabajador y no se encontrará disponible públicamente, a excepción de la persona que realizó la evaluación y los superiores correspondientes. Es importante mencionar que los reportes de gestión de rendimiento mencionados anteriormente se realizan en lapsos de 3 a 6 meses, con el fin de tener una evaluación periódica del desempeño de los trabajadores y, de esta manera, poder brindar retroalimentación oportuna para el mejoramiento continuo del trabajo. De esta manera, se promueve un ambiente laboral de crecimiento y desarrollo personal y profesional.
+  \\ \newline
+  \textbf{Gestor de pagos e indemnizaciones}
+  \\ \newline
+  Se encuentra disponible la opción de programar los pagos correspondientes a los trabajadores previamente registrados en nuestra base de datos. Es importante destacar que dichos pagos son procesados a través de los bancos designados, no obstante, es necesario tener en cuenta que no se llevan a cabo de manera automática. Con el fin de asegurar una adecuada gestión de pagos, se requiere que los mismos sean programados mensualmente, también permite la programación de pagos de indemnizaciones a los trabajadores que hayan finalizado su relación laboral con la empresa. Al igual que con los pagos regulares, las indemnizaciones también se procesan a través de los bancos designados y deben ser programadas previamente. Este servicio representa una valiosa herramienta para una gestión efectiva de los recursos financieros de su empresa y garantiza una experiencia de usuario óptima para sus empleados.
+  \\ \newline
+  \textbf{Gestor de formación}
+  \\ \newline
+  Este apartado también incluye la posibilidad de que los responsables de la capacitación puedan subir sus propios archivos y videos, los cuales estarán disponibles para su visualización en la plataforma. Adicionalmente, el sistema permite la visualización de las capacitaciones recibidas por cada empleado y la asignación de nuevas capacitaciones, con el objetivo de fomentar la formación continua y el crecimiento profesional de los colaboradores de la organización. Cabe destacar que, además de los recursos disponibles para los empleados, los usuarios externos que visiten la plataforma tendrán acceso a una amplia variedad de formación gratuita impartida por la empresa, lo que representa una oportunidad única para ampliar conocimientos y habilidades en diversas áreas de interés.
+  \\ \newline
+  \textbf{Perfiles de empleados}
+  \\ \newline
+  La empresa cuenta con una base de datos diseñada específicamente para almacenar toda la información necesaria en materia de recursos humanos. En ella, se pueden registrar datos como la información personal de los empleados, su experiencia laboral, su formación académica, su historial de desempeño, su historial de asistencia, documentos de gestión de rendimiento, sede a la que está vinculada, su rol en la empresa, entre otros.
+  \\ \newline
+  \textbf{Seguimiento de candidatos}
+  \\ \newline
+  En este apartado, se destaca la importancia de contar con un banco de datos de potenciales candidatos, el cual puede ser alimentado por información recopilada de diversas fuentes, como redes sociales, candidatos previamente rechazados y otros recursos similares. La disponibilidad de esta herramienta permite a la empresa llevar a cabo procesos de selección de personal más eficientes y efectivos, al mismo tiempo que se asegura la construcción de un banco de datos de calidad, que puede ser consultado en el futuro para la selección de nuevos talentos. Además, los empleados también pueden utilizar este recurso para comunicarse con la empresa y tratar diversos temas laborales de manera directa y efectiva.
+  \\ \newline
+  \textbf{Traducción}
+  \\ \newline
+  Dado que existen diversas empresas ubicadas en distintas partes del mundo, se ha decidido llevar a cabo una traducción manual del sitio web. Esto se debe a que las APIs de traducción automática pueden generar problemas en la calidad del texto final. Por lo tanto, se ha tomado la decisión de traducir el sitio en un total de 2 idiomas: inglés y español, con la opción de escalabilidad posterior para distintos idiomas. De esta manera, se busca lograr una mayor accesibilidad y comprensión del sitio web para los usuarios de habla no inglesa, y así mejorar la experiencia del usuario en el sitio.
+  \\ \newline
+  \textbf{Seguridad}
+  \\ \newline
+  Este proyecto implica el manejo de una amplia variedad de información confidencial y crítica para la empresa, incluyendo números de cuentas bancarias, documentos de rendimiento, información personal y capacitaciones exclusivas. En vista de la importancia de esta información, se ha decidido implementar un modelo de seguridad extremadamente riguroso para garantizar su protección. El alcance de seguridad del proyecto abarca la aplicación de medidas de seguridad de alto nivel en todos los aspectos del sistema, incluyendo el cifrado de datos sensibles, la implementación de autenticación robusta, la configuración de controles de acceso y la implementación de medidas de protección contra ataques externos. Asimismo, se llevarán a cabo pruebas de penetración y auditorías de seguridad periódicas para garantizar la eficacia del modelo de seguridad implementado y detectar posibles vulnerabilidades en el sistema. 
+  \\ \newline
+    \noindent
+  \textbf{Entregables}
+
   \begin{itemize}
-    \item El rector de la universidad, el Dr. Strange, será el encargado de autorizar los fondos necesarios para llevar a cabo el proyecto y de tomar las decisiones finales en caso de que se requieran cambios importantes en la planificación del proyecto.
-    \item La jefa de cirugía, la Dra. Claire Temple, y la directora de la carrera de la facultad, la Dra. Leslie Maurin Thompkins, serán las principales interesadas en el proyecto y estarán involucradas en la toma de decisiones relacionadas con los requerimientos y objetivos del sistema.
+    \item Especificaciones del proyecto.
+    \item Plan de proyecto.
+    \item Diseño de software.
+    \item Código fuente.
+    \item Pruebas.
+    \item Documentación.
+    \item Capacitación.
   \end{itemize}
 
-  \section{Criterios de aprobación}
-  El éxito del proyecto se medirá por la capacidad del sistema para cumplir con los objetivos establecidos en los requerimientos iniciales. La aceptación y aprobación del sistema dependerá de su capacidad para simular cirugías de manera realista y permitir un entrenamiento efectivo para los doctores especialistas y estudiantes de medicina avanzados.
+  \section{Supuestos}
+  
+    \begin{itemize}
+        \item La empresa ha identificado las necesidades en términos de recursos humanos y ha establecido un plan de contratación para cubrir las necesidades del proyecto.
+        \item Se ha evaluado la viabilidad técnica del proyecto y se ha identificado la tecnología necesaria para su desarrollo. Considerando que la tecnología es un factor clave para el éxito del proyecto, se ha establecido un plan de adquisición de tecnología.
+        \item El personal de la empresa estará disponible y dispuesto a colaborar en la implementación de dicho sistema. El enfoque deberá ser proactivo y comprometido para garantizar la seguridad y privacidad de los datos.
+    \end{itemize}
 
-  Además, el proyecto debe cumplir con los estándares de calidad y seguridad requeridos por la universidad y las regulaciones aplicables en el sector de la salud. La implementación del sistema debe ser exitosa y debe contar con el soporte y la capacitación adecuada para los usuarios finales.
+  \section{Restricciones}
+  \noindent
+  \textbf{Gestor de asistencia}
+    \\ \newline
+    Este permite mantener un registro preciso sobre la entrada y salida de los trabajadores de sus jornadas, sin embargo, la funcionalidad no es capaz supervisar la asistencia de los trabajadores durante su jornada en sí, es decir que un trabajador podría ausentarse durante un tiempo indefinido en ese lapso, sin que realmente se pudiese saber (al menos no sin ver los avances que realizó ese día en su tarea asignada).
+    \\ \newline
+    \textbf{Gestor de pagos e indemnizaciones}
+    \\ \newline
+    Esta herramienta pese a que permite realizar programación de pagos, no los automatiza, por lo que siempre es necesaria la supervisión e intervención humana.
+    \\ \newline
+    \textbf{Gestor de formación}
+    \\ \newline
+    Pese a que se permitan subir los archivos necesarios a la plataforma, con el fin de promover el aprendizaje entre los trabajadores, la capacidad de esta es limitada (dependiente de los servidores), por lo que debe tomarse en cuenta a la hora de brindar la capacidad de subida para las diferentes cuentas.
+    \\ \newline
+    \textbf{Seguimiento de candidatos}
+    \\ \newline
+    La información de candidatos posibles a un puesto en concreto será confiable a corto y mediano plazo, debido a que los candidatos podrían adquirir nuevas habilidades, disciplinas o experiencia que pueden ser útiles para la empresa, y que no será posible apreciar ya que la información estaría desactualizada.
+    \\ \newline
+    \textbf{Traducción}
+    \\ \newline
+    La traducción del sitio web, estará originalmente limitada a los idiomas de inglés y español. Por lo que, si se desea agregar nuevos idiomas en el futuro, deberán ser implementados. 
+
+    % \begin{itemize}
+    %     \item El presupuesto para la implementación del sistema en la nube es muy limitado.
+    %     \item El sistema deberá cumplir con los estándares de seguridad y privacidad de datos establecidos por la empresa. Considerando el uso, almacenamiento y procesamiento de datos personales, se deberá garantizar la seguridad y privacidad de los mismos.
+    %     \item El sistema deberá ser escalable y permisivo con los cambios constante denotados por la empresa.
+    %     \item Debe ser accesible desde cualquier lugar del mundo, considerando diferentes zonas horarias.
+    %     \item El personal debe estar capacitado para el uso del sistema, brindando además una buena comunicación y colaboración en la implementación del sistema.
+    % \end{itemize}
+
+    %   \section{Listado de hitos}
+
+    %     \begin{table}[H]
+    %         \centering
+    %         \caption{Tabla de hitos del proyecto VR Surgery System}
+    %         \begin{tabular}{|p{7.5cm}|p{2.3cm}|p{2.2cm}|p{2.2cm}|}
+    %         \hline
+    %         \rowcolor[HTML]{E6E6FA}
+    %         \textbf{\color{darkblue}Hito} & \textbf{\color{darkblue}Estado} & \textbf{\color{darkblue}Inicio} & \textbf{\color{darkblue}Fin} \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F0FFFC} Análisis y diseño del sistema & \cellcolor{yellow!25} En proceso & \cellcolor[HTML]{F0FFFC} 01/03/2023 & \cellcolor[HTML]{F0FFFC} 10/04/2023 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F6FFFD} Elaboración de prototipos & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/07/2023 & \cellcolor[HTML]{F6FFFD} 31/07/2023 \\ \hline
+    %         %\rowcolor[HTML]{F5F5F5}
+    %         \cellcolor[HTML]{F0FFFC} Desarrollo del software & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/08/2023 & \cellcolor[HTML]{F0FFFC} 30/09/2023 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F6FFFD} Pruebas de campo y correcciones & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/10/2023 & \cellcolor[HTML]{F6FFFD} 31/12/2023 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F0FFFC} Puesta en producción del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/01/2024 & \cellcolor[HTML]{F0FFFC} 28/02/2024 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F6FFFD} Capacitación del personal & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/03/2024 & \cellcolor[HTML]{F6FFFD} 31/03/2024 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F0FFFC} Simulaciones de cirugías & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/04/2024 & \cellcolor[HTML]{F0FFFC} 30/06/2024 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F6FFFD} Evaluación del rendimiento del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/07/2024 & \cellcolor[HTML]{F6FFFD} 31/07/2024 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F0FFFC} Ajustes y mejoras del sistema & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F0FFFC} 01/08/2024 & \cellcolor[HTML]{F0FFFC} 30/09/2024 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \cellcolor[HTML]{F6FFFD} Entrega del sistema a la Universidad & \cellcolor{red!25} Pendiente & \cellcolor[HTML]{F6FFFD} 01/10/2024 & \cellcolor[HTML]{F6FFFD} 31/10/2024 \\ \hline
+    %         %\rowcolor[HTML]{003C87}
+    %         \end{tabular}
+
+    %     \end{table}
 
   \section{Aprobaciones}
   \firmasaprobaciones

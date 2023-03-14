@@ -1,0 +1,133 @@
+
+\author{Hansol Antay Rostrán}
+
+%% Definición de comandos
+
+\newcommand{\institucion}{Instituto Tecnológico de Costa Rica}
+\newcommand{\nombrecurso}{Fundamentos de Organización de Computadoras}
+\newcommand{\nombreproyecto}{Proyecto 01 - Simón Dice}
+\newcommand{\valorporcentual}{15}
+\newcommand{\anolectivo}{
+    \year
+}
+\newcommand{\nota}{100}
+\newcommand{\porcentajeobtenido}{
+    %  Calcular el porcentaje obtenido con la nota
+    % Retornar (nota/100)*\valorporcentual sin condicionales
+    \numexpr\nota/100*\valorporcentual\relax
+}
+\newcommand{\estudiantes}{
+    Estudiante 1, Estudiante 2, Estudiante 3
+}
+
+\documentclass[11pt]{article}
+
+%%% PAQUETES
+\usepackage{xcolor} % Para definir colores
+\usepackage{geometry} % Para definir el margen del documento
+\usepackage{ragged2e} % Para justificar el texto
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{lipsum} % Para generar texto de prueba
+\usepackage{tcolorbox} % Para los cuadros de texto
+\usepackage[spanish]{babel} % Idioma
+\usepackage[T1]{fontenc} % Fuente (opcional)
+\usepackage{tocloft} % Para cambiar la tabla de contenidos
+\usepackage{tikz} % Para dibujar figuras
+\usepackage{titleps} % Para el encabezado
+\usepackage{sectsty} % Para cambiar el formato de las secciones
+\usepackage{hyperref} % Para agregar hipervínculos
+\usepackage{lastpage} % Para mostrar el número de página
+\usepackage{titletoc}
+\usepackage{colortbl} % Para cambiar el color de las celdas de la tabla
+\usepackage{float}
+\usepackage{datetime}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tgadventor}
+\usepackage{amsmath}
+\usepackage{pgfmath}
+\usepackage{siunitx}
+\usepackage{tikz}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% Definición de los colores de las secciones y subsecciones
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{lightblue}{rgb}{0.2, 0.4, 0.8}
+\definecolor{darkorange}{rgb}{0.9, 0.4, 0}
+\definecolor{lightred}{rgb}{0.9, 0.2, 0.2}
+\definecolor{verylightyellow}{rgb}{1, 1, 0.8}
+
+\begin{document}
+    \noindent
+    % No borrar
+    % Cambiar el tamaño de la fuente
+    \fontsize{12}{14}\selectfont
+    % Cambiar el color de la fuente
+    \color{darkblue}
+    \textbf{\institucion} \\
+    \textbf{\nombrecurso} \\
+    % Cambiar el tamaño de la fuente
+    \fontsize{10}{12}\selectfont
+    % Cambiar el color de la fuente
+    \color{black}
+    \newline
+    \textbf{Asignación: } \nombreproyecto \\
+    \textbf{Valor: } \valorporcentual\% \\
+    \textbf{Año lectivo: } {
+        % comando para mostrar el año actual
+        \the\year
+    } \\
+    \textbf{Semestre:} {
+        % Si el mes es menor a 7, entonces es Primer Semestre, de lo contrario es Segundo Semestre
+        \ifnum\month<7 Primer Semestre \else Segundo Semestre \fi
+    } \\
+
+    \newcommand{\colornota}{
+        % si es menor a 70, entonces retorna red, de lo contrario retorna green
+        \ifnum\nota<70 red \else green \fi
+    }
+
+    \definecolor{golden}{rgb}{1, 0.84, 0}
+    \definecolor{softred}{rgb}{1, 0.4, 0.4}
+    
+    \noindent
+    \begin{tikzpicture}
+        \node[rectangle, fill=black, text=white, text width=19cm*0.7, minimum height=1cm] at (0,0) {\estudiantes};
+        % if \nota is less than 70, create a red rectangle, if is 100, create a golden rectangle, otherwise create a green rectangle
+
+        % Use default LaTeX font
+        \fontfamily{cmr}
+        \ifnum\nota<70
+            \node[rectangle, fill=softred, text=black, text width=9.5cm*0.3, minimum height=1cm] at (12cm*0.7,0) {
+                \textbf{$\frac{\nota}{100}$} \ pts.
+                    % Redondear lo de abajo a 2 decimales
+                    \pgfmathparse{\nota / 100 * \valorporcentual}
+                    % Set sfdefault as font for the next text
+                    (\num[round-mode=places,round-precision=1]{\pgfmathresult}\%)
+            };
+        \else
+            \ifnum\nota>99
+                \node[rectangle, fill=golden, text=black, text width=9.5cm*0.3, minimum height=1cm] at (12cm*0.7,0) {
+                    \textbf{$\frac{\nota}{100}$} \ pts.
+                    % Redondear lo de abajo a 2 decimales
+                    \pgfmathparse{\nota / 100 * \valorporcentual}
+                    % Set sfdefault as font for the next text
+                    (\num[round-mode=places,round-precision=1]{\pgfmathresult}\%)
+                };
+            \else
+                \node[rectangle, fill=green, text=black, text width=9.5cm*0.3, minimum height=1cm] at (12cm*0.7,0) {
+                    \textbf{$\frac{\nota}{100}$} \ pts.
+                    % Redondear lo de abajo a 2 decimales
+                    \pgfmathparse{\nota / 100 * \valorporcentual}
+                    % Set sfdefault as font for the next text
+                    (\num[round-mode=places,round-precision=1]{\pgfmathresult}\%)
+                };
+            \fi
+        \fi
+
+        \fontfamily{sfdefault}
+    \end{tikzpicture}
+\end{document}
